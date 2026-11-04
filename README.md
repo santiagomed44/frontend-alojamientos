@@ -53,3 +53,12 @@ La sesión se guarda solo en `sessionStorage` y desaparece al cerrar la pestaña
 ## Pruebas
 
 `npm test` debe informar **23 pruebas superadas**, incluidos los 9 casos del Sprint 1. Las pruebas automatizadas simulan llamadas a `fetch` y no sustituyen el recorrido manual completo contra Flask/MySQL. Consulte `SPRINT-02.md` y `TUTORIAL-02.md` del paquete del docente.
+
+
+## Sprint 3 — Gestión de alojamientos y comodidades
+
+Se añaden páginas `/mis-alojamientos`, `/alojamientos/nuevo`, `/alojamientos/:id/editar` y `/admin/comodidades/nueva`. El frontend utiliza exclusivamente los endpoints previstos en el Tutorial 3, sin reservas, imágenes ni edición/eliminación del catálogo de comodidades.
+
+**Requisitos de backend:** Flask con MySQL y migraciones 001, 002 y 003. El backend del Sprint 2 por sí solo no incluye alojamientos ni comodidades. Configure `VITE_API_URL=http://localhost:5000` localmente mediante `.env` (no publicarlo).
+
+**Comprobaciones:** `npm ci`, `npm test` (37 pruebas esperadas), `npm run dev`, `npm run build`, `npm run preview`. Las operaciones CRUD requieren backend y permisos reales, no se validan solo con tests Node.
